@@ -69,5 +69,10 @@ public class VentanaPrincipal extends JFrame{
 		label_2.setBounds(100, 120, 32, 38);
 		getContentPane().add(label_2);
 		
+		JLabel label_3 = new JLabel("");
+		label_3.setIcon(new ImageIcon("F:\\CarroDPM.png"));
+		label_3.setBounds(100, 180, 32, 38);
+		getContentPane().add(label_3);
+		
 	}
 }
