@@ -40,12 +40,22 @@ public class VentanaPrincipal extends JFrame{
 		btnVerUsuarios.setBackground(new Color(139, 0, 139));
 		btnVerUsuarios.setBounds(149, 120, 126, 38);
 		getContentPane().add(btnVerUsuarios);
+		btnVerUsuarios.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Usuarios ventanaVerUsuarios = new Usuarios();
+			}
+		});
 		
 		btnVerDesp = new JButton("Mi despensa");
 		btnVerDesp.setForeground(Color.BLACK);
 		btnVerDesp.setBackground(new Color(139, 0, 139));
 		btnVerDesp.setBounds(149, 180, 126, 38);
 		getContentPane().add(btnVerDesp);
+		btnVerDesp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				miDespensa ventVerDesp = new miDespensa();
+			}
+		});
 		
 		lblSmartfood = new JLabel("SMARTFOOD");
 		lblSmartfood.setFont(new Font("Tahoma", Font.BOLD, 18));
