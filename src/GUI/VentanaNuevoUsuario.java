@@ -133,7 +133,7 @@ public class VentanaNuevoUsuario extends JFrame implements datosDesplegables {
 		}
 
 		if (creando) {
-			bot_Img = new JButton("Subir imagen");
+			bot_Img = new JButton("Cargar imagen");
 			bot_Img.setBounds(12, 250, 50, 20);
 			getContentPane().add(bot_Img);
 		} else {
@@ -157,6 +157,8 @@ public class VentanaNuevoUsuario extends JFrame implements datosDesplegables {
 		else {
 			rdbtnMujer.setSelected(true);
 		}
+		img_Prelim.setIcon(usuario.getImagen());
+		
 	}
 
 }

@@ -14,7 +14,7 @@ public class Usuario {
 	ImageIcon fotoPerfil;
 	
 	public Usuario(String nombre, Boolean genero, int edad, double altura, double peso, boolean[] enfermedades,
-			boolean[] intolerancias, boolean[] gustos) {
+			boolean[] intolerancias, boolean[] gustos, String foto) {
 		super();
 		this.nombre = nombre;
 		this.genero = genero;
@@ -24,6 +24,7 @@ public class Usuario {
 		this.enfermedades = enfermedades;
 		this.intolerancias = intolerancias;
 		this.gustos = gustos;
+		fotoPerfil = new ImageIcon(foto);
 	}
 
 	public String getNombre() {
@@ -76,6 +77,10 @@ public class Usuario {
 	
 	public ImageIcon getImagen() {
 		return fotoPerfil;
+	}
+
+	public boolean[] getGustos() {
+		return gustos;
 	}
 
 }

@@ -2,6 +2,7 @@ package packageDefault;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,8 +21,8 @@ public class GestorUsuario {
 	}
 
 	public void addUsuario(String nombre, Boolean genero, int edad, double altura, double peso, boolean[] enfermedades,
-			boolean[] intolerancias, boolean[] gustos) {
-		listaUsuarios.add(new Usuario(nombre, genero, edad, altura, peso, enfermedades, intolerancias, gustos));
+			boolean[] intolerancias, boolean[] gustos, String rutaImagen) {
+		listaUsuarios.add(new Usuario(nombre, genero, edad, altura, peso, enfermedades, intolerancias, gustos, rutaImagen));
 	}
 
 	public void leerArchivo() {
@@ -50,7 +51,8 @@ public class GestorUsuario {
 					gustos[i] = Boolean.parseBoolean(lectorArchivo.next());
 
 				}
-				addUsuario(nombre,genero,edad,altura, peso,enfermedades,intolerancias,gustos);
+				String ruta = lectorArchivo.nextLine();
+				addUsuario(nombre,genero,edad,altura, peso,enfermedades,intolerancias,gustos, ruta);
 			}
 				lectorArchivo.close();
 			
@@ -60,6 +62,33 @@ public class GestorUsuario {
 
 	}
 
+	public void actualizarArchivo() {
+		
+		try {
+			PrintWriter pw = new PrintWriter(archivoUsuarios);
+			for (int i=0; i<listaUsuarios.size(); i++) {
+				pw.print(listaUsuarios.get(i).getNombre() + " , ");
+				pw.print(listaUsuarios.get(i).getGenero() + " , ");
+				pw.print(listaUsuarios.get(i).getAltura() + " , ");
+				pw.print(listaUsuarios.get(i).getPeso() + " , ");
+				for (int j=0; j<2; j++) {
+					pw.print(listaUsuarios.get(i).getEnfermedades()[j] + " , ");
+				}
+				for (int j=0; j<3; j++) {
+					pw.print(listaUsuarios.get(i).getIntolerancias()[j] + " , ");
+				}
+				for (int j=0; j<3; j++) {
+					pw.print(listaUsuarios.get(i).getGustos()[j] + " , ");
+				}
+				pw.println(listaUsuarios.get(i).getImagen().toString());
+			}
+			
+		} catch (FileNotFoundException e) {
+			
+		}
+		
+	}
+	
 	public ArrayList<Usuario> getUsuarios() {
 		return listaUsuarios;
 	}
