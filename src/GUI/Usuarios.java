@@ -5,12 +5,14 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.io.File;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import packageDefault.ClaseMainSF;
+import packageDefault.Usuario;
 
 
 public class Usuarios extends JFrame  {
@@ -41,7 +43,7 @@ public class Usuarios extends JFrame  {
 		scrllPaneUsuarios.setBounds(25, 52, 211, 187);
 		getContentPane().add(scrllPaneUsuarios);
 		
-		ClaseMainSF.miVentanaPpal.
+		ArrayList<Usuario> listaUsuarios = ClaseMainSF.gestorUsuarios.getUsuarios();
 		
 	}
 }

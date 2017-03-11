@@ -37,5 +37,9 @@ public class GestorUsuario {
 		}*/
 		
 	}
+	
+	public ArrayList<Usuario> getUsuarios() {
+		return listaUsuarios;
+	}
 
 }
