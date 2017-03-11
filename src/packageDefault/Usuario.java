@@ -1,3 +1,4 @@
+package packageDefault;
 
 public class Usuario {
 	String nombre;

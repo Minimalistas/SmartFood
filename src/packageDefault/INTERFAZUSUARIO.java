@@ -1,3 +1,4 @@
+package packageDefault;
 
 public interface INTERFAZUSUARIO {
 

@@ -4,28 +4,44 @@ import javax.swing.JFrame;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.io.File;
+
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import packageDefault.ClaseMainSF;
+
+
 public class Usuarios extends JFrame  {
+	
+	JLabel lblUsuario;
+	JLabel lblImg;
+	JScrollPane scrllPaneUsuarios;
+	
 	public Usuarios() {
+		
 		getContentPane().setBackground(new Color(188, 255, 193));
 		getContentPane().setLayout(null);
+		setEnabled(true);
+		setVisible(true);
+		setBounds(200, 150, 470, 350);
 		
-		JLabel lblUsuario = new JLabel("Usuarios");
+		lblUsuario = new JLabel("Usuarios");
 		lblUsuario.setFont(new Font("Dialog", Font.BOLD, 14));
 		lblUsuario.setBounds(173, 13, 76, 16);
 		getContentPane().add(lblUsuario);
 		
-		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("C:\\Users\\Alvaro\\Desktop\\HackForGood\\sanddib128.png"));
-		label.setBounds(265, 69, 177, 200);
-		getContentPane().add(label);
+		lblImg = new JLabel("");
+		lblImg.setIcon(new ImageIcon(new File("").getAbsolutePath() + "\\sanddib128.png"));
+		lblImg.setBounds(265, 69, 177, 200);
+		getContentPane().add(lblImg);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(227, 218, -176, -151);
-		getContentPane().add(scrollPane);
+		scrllPaneUsuarios = new JScrollPane();
+		scrllPaneUsuarios.setBounds(25, 52, 211, 187);
+		getContentPane().add(scrllPaneUsuarios);
+		
+		ClaseMainSF.miVentanaPpal.
 		
 	}
 }
