@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class Despensa {
 
-	ArrayList<Producto> listaProductos;
-	File archivoProductos;
-	Scanner lectorArchivo;
+	private ArrayList<Producto> listaProductos;
+	private File archivoProductos;
+	private Scanner lectorArchivo;
 	
 	public Despensa() {
 		
@@ -28,6 +28,10 @@ public class Despensa {
 	
 	public void añadirProducto(int codBarr) {
 		listaProductos.add(new Producto(codBarr));
+	}
+	
+	public ArrayList<Producto> getListaProductos() {
+		return listaProductos;
 	}
 	
 }

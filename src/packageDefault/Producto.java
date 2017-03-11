@@ -3,9 +3,10 @@ import java.util.Date;
 
 public class Producto {
 
-	String nombre;
-	int codBarr;
-	Date fechaCad;
+	private String nombre;
+	private int codBarr;
+	private Date fechaCad;
+	private int Calorias;
 	
 	public Producto(String nombre) {
 		
@@ -25,5 +26,8 @@ public class Producto {
 		return Math.floor((fechaCad.getTime() - System.currentTimeMillis())/ (1000 * 60 * 60 * 24));
 	}
 	
+	public String getNombre() {
+		return nombre;
+	}
 	
 }
