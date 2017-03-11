@@ -10,10 +10,12 @@ import javax.swing.JRadioButton;
 import javax.swing.JComboBox;
 
 public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
+	
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+	
 	public VentanaNuevoUsuario(boolean creando) {
 		getContentPane().setLayout(null);
 	    getContentPane().setBackground(new Color(188,255,193));
@@ -101,6 +103,13 @@ public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
 	    for (int i=0; i<intolerancias.length; i++){
 	    
 	    	cbintolerancias.addItem(intolerancias[i]);
+	    }
+	    
+	    if (creando) {
+	    	//JButton abajo a la izquierda que pida imagen para el usuario
+	    }
+	    else {
+	    	//JLabel arriba a la derecha sin texto y con icono de usuario
 	    }
 	    
 	    

@@ -4,10 +4,13 @@ import javax.swing.JFrame;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
@@ -44,6 +47,23 @@ public class Usuarios extends JFrame  {
 		getContentPane().add(scrllPaneUsuarios);
 		
 		ArrayList<Usuario> listaUsuarios = ClaseMainSF.gestorUsuarios.getUsuarios();
-		
+		for (int i=0; i<listaUsuarios.size(); i++) {
+			scrllPaneUsuarios.add(new JLabel(""));
+			((JLabel) scrllPaneUsuarios.getComponent(scrllPaneUsuarios.getComponentCount()-1)).setIcon(listaUsuarios.get(i).getImagen());
+			((JLabel) scrllPaneUsuarios.getComponent(scrllPaneUsuarios.getComponentCount()-1)).setBounds(10, 10+87*i, 69, 62);
+			((JLabel) scrllPaneUsuarios.getComponent(scrllPaneUsuarios.getComponentCount()-1)).setVisible(true);
+			((JLabel) scrllPaneUsuarios.getComponent(scrllPaneUsuarios.getComponentCount()-1)).setEnabled(true);
+			scrllPaneUsuarios.add(new JButton(listaUsuarios.get(i).getNombre()));
+			((JButton) scrllPaneUsuarios.getComponent(scrllPaneUsuarios.getComponentCount()-1)).setBounds(118, 32+87*i, 86, 24);
+			((JButton) scrllPaneUsuarios.getComponent(scrllPaneUsuarios.getComponentCount()-1)).setVisible(true);
+			((JButton) scrllPaneUsuarios.getComponent(scrllPaneUsuarios.getComponentCount()-1)).setEnabled(true);
+			((JButton) scrllPaneUsuarios.getComponent(scrllPaneUsuarios.getComponentCount()-1)).addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					VentanaNuevoUsuario ventMostrarUsuario = new VentanaNuevoUsuario(false);
+					
+				}
+				
+			});
+		}
 	}
 }

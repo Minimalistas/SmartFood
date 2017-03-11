@@ -1,5 +1,7 @@
 package packageDefault;
 
+import javax.swing.ImageIcon;
+
 public class Usuario {
 	String nombre;
 	Boolean genero; // True= Hombre, False=Mujer
@@ -9,7 +11,7 @@ public class Usuario {
 	boolean[] enfermedades;
 	boolean[] intolerancias;
 	boolean[] gustos;
-
+	ImageIcon fotoPerfil;
 	
 	public Usuario(String nombre, Boolean genero, int edad, double altura, double peso, boolean[] enfermedades,
 			boolean[] intolerancias, boolean[] gustos) {
@@ -70,6 +72,10 @@ public class Usuario {
 
 	public void setIntolerancias(boolean[] intolerancias) {
 		this.intolerancias = intolerancias;
+	}
+	
+	public ImageIcon getImagen() {
+		return fotoPerfil;
 	}
 
 }
