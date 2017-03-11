@@ -28,8 +28,12 @@ public class VentanaPrincipal extends JFrame{
 	
 	public VentanaPrincipal() {
 		
+		setTitle("SmartFood");
 		getContentPane().setBackground(new Color(188,255,193));
 		getContentPane().setLayout(null);
+		setVisible(true);
+		setEnabled(true);
+		setBounds(250,150, 450, 350);
 		
 		btnVerUsuarios = new JButton("Ver usuarios");
 		btnVerUsuarios.setForeground(new Color(0, 0, 0));
@@ -54,10 +58,16 @@ public class VentanaPrincipal extends JFrame{
 		getContentPane().add(lblImagenPpal);
 		
 		btnNuevoUsuario = new JButton("Nuevo Usuario");
+		btnNuevoUsuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaNuevoUsuario VentCrearUsuario = new VentanaNuevoUsuario(true);
+			}
+		});
 		btnNuevoUsuario.setForeground(new Color(0, 0, 0));
 		btnNuevoUsuario.setBackground(new Color(139, 0, 139));
 		btnNuevoUsuario.setBounds(149, 64, 126, 38);
 		getContentPane().add(btnNuevoUsuario);
+		
 		
 		lblimgNewUsr = new JLabel("");
 		lblimgNewUsr.setIcon(new ImageIcon(new File("").getAbsolutePath() + "\\addUsrDPM.png"));

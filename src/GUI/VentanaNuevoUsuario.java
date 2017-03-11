@@ -14,7 +14,7 @@ public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
-	public VentanaNuevoUsuario() {
+	public VentanaNuevoUsuario(boolean creando) {
 		getContentPane().setLayout(null);
 	    getContentPane().setBackground(new Color(188,255,193));
 	    
