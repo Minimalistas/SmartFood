@@ -60,7 +60,7 @@ public class VentanaPrincipal extends JFrame{
 		getContentPane().add(btnNuevoUsuario);
 		
 		lblimgNewUsr = new JLabel("");
-		lblimgNewUsr.setIcon(new ImageIcon("C:\\Users\\Alvaro\\Downloads\\add-user-64x64_converted.png"));
+		lblimgNewUsr.setIcon(new ImageIcon(new File("").getAbsolutePath() + "\\addUsrDPM.png"));
 		lblimgNewUsr.setBounds(100, 64, 44, 43);
 		getContentPane().add(lblimgNewUsr);
 		
