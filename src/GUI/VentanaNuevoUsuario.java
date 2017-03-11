@@ -5,6 +5,7 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JRadioButton;
 import javax.swing.JComboBox;
@@ -106,10 +107,15 @@ public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
 	    }
 	    
 	    if (creando) {
-	    	//JButton abajo a la izquierda que pida imagen para el usuario
+	    	JButton bot_Img = new JButton("Subir imagen");
+	    	bot_Img.setBounds(12, 250, 50, 20);
+	    	 getContentPane().add(bot_Img);
 	    }
 	    else {
 	    	//JLabel arriba a la derecha sin texto y con icono de usuario
+	    	JLabel img_Prelim= new JLabel();
+	    	img_Prelim.setBounds(250, 30, 30, 40);
+	    	 getContentPane().add(img_Prelim);
 	    }
 	    
 	    

@@ -51,8 +51,9 @@ public class GestorUsuario {
 
 				}
 				addUsuario(nombre,genero,edad,altura, peso,enfermedades,intolerancias,gustos);
-				
 			}
+				lectorArchivo.close();
+			
 		} catch (FileNotFoundException e) {
 
 		}
