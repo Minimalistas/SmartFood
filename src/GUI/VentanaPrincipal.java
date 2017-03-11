@@ -13,6 +13,7 @@ import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class VentanaPrincipal extends JFrame{
 
@@ -27,6 +28,7 @@ public class VentanaPrincipal extends JFrame{
 	JLabel lblimgMiDesp;
 	
 	public VentanaPrincipal() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Alvaro\\Desktop\\HackForGood\\Icono principaldpm.png"));
 		
 		setTitle("SmartFood");
 		getContentPane().setBackground(new Color(188,255,193));
@@ -37,7 +39,7 @@ public class VentanaPrincipal extends JFrame{
 		
 		btnVerUsuarios = new JButton("Ver usuarios");
 		btnVerUsuarios.setForeground(new Color(0, 0, 0));
-		btnVerUsuarios.setBackground(new Color(139, 0, 139));
+		btnVerUsuarios.setBackground(Color.GRAY);
 		btnVerUsuarios.setBounds(149, 120, 126, 38);
 		getContentPane().add(btnVerUsuarios);
 		btnVerUsuarios.addActionListener(new ActionListener() {
@@ -48,7 +50,7 @@ public class VentanaPrincipal extends JFrame{
 		
 		btnVerDesp = new JButton("Mi despensa");
 		btnVerDesp.setForeground(Color.BLACK);
-		btnVerDesp.setBackground(new Color(139, 0, 139));
+		btnVerDesp.setBackground(Color.GRAY);
 		btnVerDesp.setBounds(149, 180, 126, 38);
 		getContentPane().add(btnVerDesp);
 		btnVerDesp.addActionListener(new ActionListener() {
@@ -74,7 +76,7 @@ public class VentanaPrincipal extends JFrame{
 			}
 		});
 		btnNuevoUsuario.setForeground(new Color(0, 0, 0));
-		btnNuevoUsuario.setBackground(new Color(139, 0, 139));
+		btnNuevoUsuario.setBackground(Color.GRAY);
 		btnNuevoUsuario.setBounds(149, 64, 126, 38);
 		getContentPane().add(btnNuevoUsuario);
 		
