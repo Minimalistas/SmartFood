@@ -5,6 +5,7 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JRadioButton;
@@ -12,7 +13,7 @@ import javax.swing.JComboBox;
 
 public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
 	
-	private JTextField textField;
+	private JTextField textFNombre;
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
@@ -30,10 +31,10 @@ public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
 	    lblNombre.setBounds(12, 48, 56, 16);
 	    getContentPane().add(lblNombre);
 	    
-	    textField = new JTextField();
-	    textField.setBounds(80, 45, 116, 22);
-	    getContentPane().add(textField);
-	    textField.setColumns(10);
+	    textFNombre = new JTextField();
+	    textFNombre.setBounds(80, 45, 116, 22);
+	    getContentPane().add(textFNombre);
+	    textFNombre.setColumns(10);
 	    
 	    JLabel lblGnero = new JLabel("G\u00E9nero:");
 	    lblGnero.setBounds(12, 77, 56, 16);
@@ -120,4 +121,10 @@ public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
 	    
 	    
 	}
+	
+	public void recibirDatos(String nombre, boolean genero, int edad, double peso, int altura, boolean[] intolerancias, boolean[] enfermedades, boolean[] gustos, ImageIcon fotoPerfil) {
+		
+		textFNombre.setText(nombre);		
+	}
+	
 }
