@@ -8,9 +8,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import java.awt.Toolkit;
 
 public class miDespensa extends JFrame{
 	public miDespensa() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Alvaro\\Desktop\\HackForGood\\Icono principaldpm.png"));
 		getContentPane().setBackground(new Color(188, 255, 193));
 		getContentPane().setLayout(null);
 		setVisible(true);
@@ -35,28 +37,38 @@ public class miDespensa extends JFrame{
 		JButton botonLegumbresAnimal = new JButton("Legumbres y productos de origen animal");
 		botonLegumbresAnimal.setBounds(80, 103, 272, 25);
 		getContentPane().add(botonLegumbresAnimal);
-		botonGrasasAzucares.addActionListener(new ActionListener() {
+		botonLegumbresAnimal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				LegumbresYProductosAnimales ventanaLegumbres= new LegumbresYProductosAnimales();
 			}
 		});
 		
 		JButton botonFrutasVerduras = new JButton("Frutas y verduras");
-		botonFrutasVerduras.setBounds(80, 154, 272, 25);
+		botonFrutasVerduras.setBounds(80, 151, 272, 25);
 		getContentPane().add(botonFrutasVerduras);
-		botonGrasasAzucares.addActionListener(new ActionListener() {
+		botonFrutasVerduras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				FrutasyVerduras ventanaFrutasVerduras= new FrutasyVerduras();
 			}
 		});
 		
 		JButton botonCerealesTuberculos = new JButton("Cereales y tub\u00E9rculos");
-		botonCerealesTuberculos.setBounds(80, 200, 272, 25);
+		botonCerealesTuberculos.setBounds(80, 199, 272, 25);
 		getContentPane().add(botonCerealesTuberculos);
-		botonGrasasAzucares.addActionListener(new ActionListener() {
+		botonCerealesTuberculos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				grasasYAzucares ventanaGrasasAzucares= new grasasYAzucares();
+				cerealesYTuberculos ventanaGrasasAzucares= new cerealesYTuberculos();
 			}
 		});
+		
+		JButton botonBebidas = new JButton("Bebidas");
+		botonBebidas.setBounds(80, 247, 272, 25);
+		getContentPane().add(botonBebidas);
+		botonBebidas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Bebidas ventanaBebidas = new Bebidas();
+			}
+		});
+		
 	}
 }
