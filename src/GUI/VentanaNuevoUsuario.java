@@ -5,6 +5,9 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
+
+import packageDefault.Usuario;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -122,9 +125,9 @@ public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
 	    
 	}
 	
-	public void recibirDatos(String nombre, boolean genero, int edad, double peso, int altura, boolean[] intolerancias, boolean[] enfermedades, boolean[] gustos, ImageIcon fotoPerfil) {
+	public void recibirDatos(Usuario usuario) {
 		
-		textFNombre.setText(nombre);		
+		textFNombre.setText(usuario.getNombre());		
 	}
 	
 }
