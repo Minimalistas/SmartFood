@@ -17,9 +17,9 @@ import javax.swing.JComboBox;
 public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
 	
 	private JTextField textFNombre;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField textFEdad;
+	private JTextField textFPeso;
+	private JTextField textFAltura;
 	
 	public VentanaNuevoUsuario(boolean creando) {
 		getContentPane().setLayout(null);
@@ -47,28 +47,28 @@ public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
 	    lblEdad.setBounds(12, 106, 56, 16);
 	    getContentPane().add(lblEdad);
 	    
-	    textField_1 = new JTextField();
-	    textField_1.setBounds(80, 103, 64, 22);
-	    getContentPane().add(textField_1);
-	    textField_1.setColumns(10);
+	    textFEdad = new JTextField();
+	    textFEdad.setBounds(80, 103, 64, 22); ///////////
+	    getContentPane().add(textFEdad);
+	    textFEdad.setColumns(10);
 	    
 	    JLabel lblPeso = new JLabel("Peso(kg):");
 	    lblPeso.setBounds(156, 107, 56, 16);
 	    getContentPane().add(lblPeso);
 	    
-	    textField_2 = new JTextField();
-	    textField_2.setColumns(10);
-	    textField_2.setBounds(213, 103, 64, 22);
-	    getContentPane().add(textField_2);
+	    textFPeso = new JTextField();
+	    textFPeso.setColumns(10);
+	    textFPeso.setBounds(213, 103, 64, 22);
+	    getContentPane().add(textFPeso);
 	    
 	    JLabel lblAltura = new JLabel("Altura(cm):");
 	    lblAltura.setBounds(289, 107, 67, 16);
 	    getContentPane().add(lblAltura);
 	    
-	    textField_3 = new JTextField();
-	    textField_3.setColumns(10);
-	    textField_3.setBounds(356, 103, 64, 22);
-	    getContentPane().add(textField_3);
+	    textFAltura = new JTextField();
+	    textFAltura.setColumns(10);
+	    textFAltura.setBounds(356, 103, 64, 22);
+	    getContentPane().add(textFAltura);
 	    
 	    JRadioButton rdbtnNewRadioButton = new JRadioButton("Hombre");
 	    rdbtnNewRadioButton.setBounds(80, 73, 127, 25);
@@ -128,6 +128,11 @@ public class VentanaNuevoUsuario extends JFrame implements datosDesplegables{
 	public void recibirDatos(Usuario usuario) {
 		
 		textFNombre.setText(usuario.getNombre());		
+		textFEdad.setText(Integer.toString(usuario.getEdad()));
+		textFPeso.setText(Double.toString(usuario.getPeso()));	
+		textFAltura.setText(Double.toString(usuario.getAltura()));
+		
+		
 	}
 	
 }
